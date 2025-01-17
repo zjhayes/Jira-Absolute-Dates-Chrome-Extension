@@ -1,0 +1,19 @@
+{
+  "name": "Jira Absolute Dates",
+  "version": "1.0",
+  "description": "Replace relative dates in Jira Cloud's Dashboard gadgets with absolute dates.",
+  "manifest_version": 3,
+  "permissions": ["activeTab"],
+  "host_permissions": [
+    "*://*.atlassian.net/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://*.atlassian.net/*"],
+      "js": ["content-script.js"]
+    }
+  ],
+  "action": {
+    "default_icon": "app_icon.png"
+  }
+}
